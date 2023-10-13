@@ -1,0 +1,19 @@
+@use "/src/_import.scss" as *;
+
+.duration-card {
+    max-width: 20rem;
+    margin-bottom: 8px;
+    margin: 15px;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 1px 3px 2px 0px rgba(0, 0, 0, 0.2), 1px 2px 2px 1px rgba(0, 0, 0, 0.14), 1px 2px 4px 1px rgba(0, 0, 0, 0.12)
+}
+
+.duration {
+    padding: $main-margin;
+    font-weight: bold;
+    font-size: 2rem;
+}

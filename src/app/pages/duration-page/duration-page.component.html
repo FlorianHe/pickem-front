@@ -1,0 +1,10 @@
+<div class="game">
+    <div>Longest Games</div>
+    <div class="duration">
+        <app-duration-block *ngFor="let game of longestGames" [game]="game"></app-duration-block>
+    </div>
+    <div>Shortest Games</div>
+    <div class="duration">
+        <app-duration-block *ngFor="let game of shortestGames" [game]="game"></app-duration-block>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+$main-background-color: #fff;
+$secondary-background-color: #EEEEEE;
+
+$main-text-color: #000;
+$secondary-text-color: #410B13;
+$fairy-color: #FECEE9;
+
+$main-line-height: 1.5rem;
+
+$small-margin: 0.5rem;
+$main-margin: 1rem;
+$big-margin: 2rem;
+
+$min-width-desktop: 800px;
+
+
+@mixin buttons {
+  color: $secondary-text-color;
+  background-color: white;
+  padding: $main-border;
+  border: solid 1px $fairy-color;
+  border-radius: $big-border;
+  cursor: pointer;
+  height: 50px;
+  width: max-content;
+}
