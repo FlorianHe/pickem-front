@@ -15,7 +15,7 @@ export class DrakePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.drakeService.getDrakes().subscribe((drakes) => {
-      this.drakes = drakes.sort((a, b) => b.killed - a.killed);
+      this.drakes = drakes//.sort((a, b) => b.killed - a.killed);
     })
   }
 

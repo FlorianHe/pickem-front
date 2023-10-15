@@ -1,0 +1,20 @@
+@use "/src/_import.scss" as *;
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.create-label {
+    text-align: center;
+    font-size: 48px;
+}
+
+.bo-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: $big-margin;
+}

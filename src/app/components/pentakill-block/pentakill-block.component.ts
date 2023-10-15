@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Pentakill } from 'src/app/shared/interfaces/pentakill';
+import { PentakillAmount } from 'src/app/shared/interfaces/pentakillAmount';
 
 @Component({
   selector: 'app-pentakill-block',
@@ -8,7 +8,7 @@ import { Pentakill } from 'src/app/shared/interfaces/pentakill';
 })
 export class PentakillBlockComponent implements OnInit {
 
-  @Input() pentakill! : Pentakill
+  @Input() pentakill! : PentakillAmount
 
   constructor() { }
 

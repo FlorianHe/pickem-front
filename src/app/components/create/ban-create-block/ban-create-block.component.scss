@@ -1,0 +1,13 @@
+@use "/src/_import.scss" as *;
+
+.ban-label {
+    margin: 0 $big-margin;
+}
+
+.ban-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: $big-margin ;
+    margin-top: 0
+}

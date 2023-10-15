@@ -12,6 +12,8 @@ const APP_ROUTES = {
     rIndex: '',
     drake: '/drake',
     rDrake: 'drake',
+    create: '/create-game',
+    rCreate: 'create-game',
     notFound: '/404',
     rNotFound: '404',
 };

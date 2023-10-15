@@ -1,0 +1,10 @@
+<div class="custom-dropdown">
+    <div class="selected-team" (click)="toggleOptions()">
+        <span *ngIf="!selectedTeam">Select a team</span>
+        <img *ngIf="selectedTeam" width="160" height="60" src="/assets/images/teams/{{selectedTeam.name | spaceToUnderscore }}.webp" /></div>
+    <ul class="dropdown-options" *ngIf="showOptions">
+        <li *ngFor="let team of teams" (click)="selectTeam(team)">
+            <img width="160" height="60" src="/assets/images/teams/{{team.name | spaceToUnderscore }}.webp" />
+        </li>
+    </ul>
+</div>

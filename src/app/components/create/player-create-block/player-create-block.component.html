@@ -1,0 +1,6 @@
+<div class="player-label">{{player.name}}</div>
+<app-champion-select (championPicked)="onChampionPicked($event)"></app-champion-select>
+<div class="pentakill-input">
+    <div>Pentakill</div>
+    <input [(ngModel)]="pentakill" type="number"/>
+</div>

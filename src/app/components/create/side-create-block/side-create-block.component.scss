@@ -1,0 +1,23 @@
+@use "/src/_import.scss" as *;
+
+.flex-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.valid-input {
+    border: 2px solid green;
+}
+  
+.invalid-input {
+    border: 2px solid red;
+}
+
+.baron-input, .duration-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    margin: $big-margin;
+    margin-top: 0
+}
