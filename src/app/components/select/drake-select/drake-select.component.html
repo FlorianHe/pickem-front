@@ -1,0 +1,10 @@
+<div class="custom-dropdown">
+    <div class="selected-drake" (click)="toggleOptions()">
+        <span *ngIf="!selectedDrake">Select a drake</span>
+        <img *ngIf="selectedDrake" width="100" height="112" src="/assets/images/drakes/{{selectedDrake.type}}.webp" /></div>
+    <ul class="dropdown-options" *ngIf="showOptions">
+        <li *ngFor="let drake of drakes" (click)="selectDrake(drake)">
+            <img width="100" height="112" src="/assets/images/drakes/{{drake.type}}.webp" />
+        </li>
+    </ul>
+</div>

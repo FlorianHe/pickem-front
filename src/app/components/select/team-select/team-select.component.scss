@@ -1,0 +1,41 @@
+.custom-dropdown {
+    position: relative;
+    width: 161px;
+    border: 1px solid grey;
+  }
+  
+  .selected-team {
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+  }
+  
+  .dropdown-options {
+    z-index: 10;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .dropdown-options::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  .dropdown-options::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .dropdown-options li {
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+  }
+  
+  .dropdown-options li:hover {
+    background-color: #f0f0f0;
+  }

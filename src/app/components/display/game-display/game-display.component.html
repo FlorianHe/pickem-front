@@ -1,0 +1,39 @@
+<div class="game">
+    <div class="center duration">{{game.duration}}</div>
+    <div class="sides">
+        <div class="blue-side">
+            <div class="team-img">
+                <div>
+                    <img width="72" height="72" src="/assets/images/teams/{{blueSide.team.name | spaceToUnderscore }}.png" />
+                </div>
+                <div class="result-number">
+                    <span *ngIf="blueSide.team.id === game.teamWinner.id">1</span>
+                    <span *ngIf="blueSide.team.id !== game.teamWinner.id">0</span>
+                </div>
+            </div>
+            <div class="center">Bans</div>
+            <app-ban-display [bans]="blueSide.ban"></app-ban-display>
+            <div class="center">Drakes</div>
+            <app-drake-display [drakes]="blueSide.drakeKilled"></app-drake-display>
+            <div class="center">Picks</div>
+            <app-pick-display [picks]="blueSide.pick"></app-pick-display>
+        </div>
+        <div class="red-side">
+            <div class="team-img">
+                <div class="result-number">
+                    <span *ngIf="redSide.team.id === game.teamWinner.id">1</span>
+                    <span *ngIf="redSide.team.id !== game.teamWinner.id">0</span>
+                </div>
+                <div>
+                    <img width="72" height="72" src="/assets/images/teams/{{redSide.team.name | spaceToUnderscore }}.png" />
+                </div>
+            </div>
+            <div class="center">Bans</div>
+            <app-ban-display [bans]="redSide.ban"></app-ban-display>
+            <div class="center">Drakes</div>
+            <app-drake-display [drakes]="redSide.drakeKilled"></app-drake-display>
+            <div class="center">Picks</div>
+            <app-pick-display [picks]="redSide.pick"></app-pick-display>
+        </div>
+    </div>
+</div>

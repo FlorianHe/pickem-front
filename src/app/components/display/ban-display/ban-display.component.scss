@@ -1,0 +1,11 @@
+@use "/src/_import.scss" as *;
+
+.ban {
+    display: flex;
+    .champion-ban {
+        margin:$main-margin;
+        .champion-img {
+            border-radius: 20px;
+        }
+    }
+}

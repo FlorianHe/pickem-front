@@ -1,0 +1,43 @@
+.custom-dropdown {
+  position: relative;
+  width: 101px;
+  border: 1px solid grey;
+}
+
+.selected-champion {
+  width: 100px;
+  height: 112px;
+  cursor: pointer;
+}
+
+.dropdown-rows {
+  z-index: 10;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.dropdown-rows::-webkit-scrollbar {
+  width: 0;
+}
+
+.dropdown-rows::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.dropdown-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-row div {
+  width: 100px;
+  height: 112px;
+  cursor: pointer;
+}
+
+.dropdown-row div:hover {
+  background-color: #f0f0f0;
+}

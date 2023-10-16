@@ -1,0 +1,31 @@
+<div class="create-label">Create a game</div>
+
+<div class="bo-input">
+    <div>BO</div>
+    <div *ngIf="bo"><input [(ngModel)]="bo.id" (input)="onBOChange()" type="number"/></div>
+</div>
+<div class="winner">
+    <div>
+        <input type="checkbox" [disabled]="!isBlueTeamValid()" [(ngModel)]="blueTeamWins" (change)="onWinnerChange('blue')" name="blue-win"/><label for="blue-win">Blue team win</label>
+    </div>
+    <div>
+        <input type="checkbox" [disabled]="!isRedTeamValid()" [(ngModel)]="redTeamWins" (change)="onWinnerChange('red')" name="red-win"/><label for="red-win">Red team win</label>
+    </div>
+</div>
+<div class="teams">
+    <app-side-create-block [sideColor]="'blue'"></app-side-create-block>
+    <app-side-create-block [sideColor]="'red'"></app-side-create-block>
+</div>
+<div class="bottom-input">
+    <div class="baron-input">
+        <div>Baron Steal</div>
+        <input [(ngModel)]="baronSteal" type="number"/>
+    </div>
+    <div class="duration-input">
+        <div>Duration</div>
+        <input [(ngModel)]="duration" (input)="onDurationChange()"  [ngClass]="{ 'valid-input': isDurationValid, 'invalid-input': !isDurationValid }"/>
+    </div>
+    <div class="send-div">
+        <button class="send-btn" [disabled]="!isValid()" (click)="sendBO()">Send BO</button><!---->
+    </div>
+</div>

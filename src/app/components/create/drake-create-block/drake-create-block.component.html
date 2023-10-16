@@ -1,0 +1,5 @@
+<div class="drake-label">Drakes</div>
+<div class="drake-list">
+    <app-drake-select *ngFor="let _ of [].constructor(4);" (drakePicked)="onDrakePicked($event)" [clear]="clear"></app-drake-select>
+    <button (click)="onClear()">Clear</button>
+</div>

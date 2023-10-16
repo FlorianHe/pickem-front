@@ -1,0 +1,9 @@
+@use "/src/_import.scss" as *;
+
+.pick-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: $big-margin;
+    margin-top: 0
+}

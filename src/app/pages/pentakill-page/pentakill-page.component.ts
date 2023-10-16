@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PentakillService } from 'src/app/services/pentakill.service';
-import { Pentakill } from 'src/app/shared/interfaces/pentakill';
+import { PentakillAmount } from 'src/app/shared/interfaces/pentakillAmount';
 
 @Component({
   selector: 'app-pentakill-page',
@@ -9,7 +9,7 @@ import { Pentakill } from 'src/app/shared/interfaces/pentakill';
 })
 export class PentakillPageComponent implements OnInit {
 
-  pentakills! : Pentakill[];
+  pentakills! : PentakillAmount[];
 
   constructor(private pentakillService : PentakillService) { }
 

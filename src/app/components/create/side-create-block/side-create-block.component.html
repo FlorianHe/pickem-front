@@ -1,0 +1,4 @@
+<app-team-create-block class="flex-side" (teamPicked)="onTeamPicked($event)"></app-team-create-block>
+<app-ban-create-block class="flex-side" *ngIf="side.team.id != 0" (championPicked)="onBanChampionPicked($event)"></app-ban-create-block>
+<app-drake-create-block class="flex-side" *ngIf="side.team.id != 0" (drakeKilled)="onDrakePicked($event)" [sideColor]="sideColor"></app-drake-create-block>
+<app-pick-create-block [team]="team" class="flex-side" *ngIf="side.team.id != 0" (playerPicked)="OnPlayerPicked($event)"></app-pick-create-block>

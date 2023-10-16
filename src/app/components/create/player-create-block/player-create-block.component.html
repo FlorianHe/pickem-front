@@ -1,0 +1,20 @@
+<div class="player-label">{{player.name}}</div>
+<app-champion-select (championPicked)="onChampionPicked($event)" [i]="i"></app-champion-select>
+<div class="kda-input-div">
+    <div class="kda-input">
+        <div>Kill</div>
+        <input [(ngModel)]="kda.kills" (input)="onKDAChange()" type="number"/>
+    </div>
+    <div class="kda-input">
+        <div>Death</div>
+        <input [(ngModel)]="kda.death" (input)="onKDAChange()" type="number"/>
+    </div>
+    <div class="kda-input">
+        <div>Assist</div>
+        <input [(ngModel)]="kda.assist" (input)="onKDAChange()" type="number"/>
+    </div>
+</div>
+<div class="pentakill-input">
+    <div>Pentakill</div>
+    <input [(ngModel)]="pentakill" (input)="onPentakill()" type="number"/>
+</div>

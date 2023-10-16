@@ -1,0 +1,3 @@
+<div class="pick-list">
+    <app-player-create-block class="flex-side" (playerPicked)="onPlayerPicked($event)" *ngFor="let player of players; let i = index" [player]="player" [i]="i"></app-player-create-block>
+</div>

@@ -1,0 +1,14 @@
+@use "/src/_import.scss" as *;
+
+.flex-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.valid-input {
+    border: 2px solid green;
+}
+  
+.invalid-input {
+    border: 2px solid red;
+}
