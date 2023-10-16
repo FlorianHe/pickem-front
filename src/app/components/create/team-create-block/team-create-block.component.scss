@@ -1,0 +1,13 @@
+@use "/src/_import.scss" as *;
+
+.team-label {
+    margin: 0 $big-margin;
+}
+
+.team-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $big-margin;
+    margin-top: 0
+}

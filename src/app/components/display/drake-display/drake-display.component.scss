@@ -1,0 +1,12 @@
+@use "/src/_import.scss" as *;
+
+.drake {
+    display: flex;
+    justify-content: center;
+    .drake-div {
+        margin:$main-margin;
+        .drake-img {
+            border-radius: 20px;
+        }
+    }
+}

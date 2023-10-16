@@ -1,0 +1,41 @@
+@use "/src/_import.scss" as *;
+
+.game {
+    display: flex;
+    flex-direction: column;
+    .duration {
+        margin-top: $small-margin;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .team-img {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: $main-margin;
+        img {
+            background-color: black;
+        }
+    }
+    .sides {
+        display: flex;
+        justify-content: space-between;
+        .blue-side {
+            .result-number {
+                margin: auto 0;
+                padding-left: 3rem;
+                font-weight: bold;
+                font-size: 3rem;
+            }
+        }
+        
+        .red-side {
+            .result-number {
+                margin: auto 0;
+                padding-right: 3rem;
+                font-weight: bold;
+                font-size: 3rem;
+            }
+        }
+    }
+}

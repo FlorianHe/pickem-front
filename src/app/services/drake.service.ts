@@ -19,7 +19,4 @@ export class DrakeService {
     return this.http.get<Drake>(`${PICKEM_API.baseDrake}/${id}`);
   }
 
-  createDrake(drake : Drake): Observable<Drake> {
-    return this.http.post<Drake>(`${PICKEM_API.baseDrake}`, drake);
-  }
 }

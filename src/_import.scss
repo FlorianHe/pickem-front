@@ -17,9 +17,9 @@ $min-width-desktop: 800px;
 @mixin buttons {
   color: $secondary-text-color;
   background-color: white;
-  padding: $main-border;
+  padding: $main-margin;
   border: solid 1px $fairy-color;
-  border-radius: $big-border;
+  border-radius: $big-margin;
   cursor: pointer;
   height: 50px;
   width: max-content;

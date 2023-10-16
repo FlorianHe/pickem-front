@@ -1,10 +1,12 @@
+import { BO } from "./bO"
 import { Team } from "./team"
 
 export interface Game {
     id:number
     baronSteals:number
     duration:string
-    teamAway : Team
-    teamHome : Team
-    BO : number
+    teamBlue : Team
+    teamRed : Team
+    teamWinner : Team
+    bo : BO
 }
