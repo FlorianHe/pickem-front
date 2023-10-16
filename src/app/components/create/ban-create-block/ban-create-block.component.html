@@ -1,4 +1,4 @@
 <div class="ban-label">Bans</div>
 <div class="ban-list">
-    <app-champion-select *ngFor="let _ of [].constructor(5);" (championPicked)="onChampionPicked($event)"></app-champion-select>
+    <app-champion-select *ngFor="let _ of [].constructor(5);let i = index" (championPicked)="onChampionPicked($event)" [i]="i"></app-champion-select>
 </div>

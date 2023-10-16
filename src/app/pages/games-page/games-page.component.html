@@ -1,0 +1,10 @@
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let bo of bos" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <app-match-display [bo]="bo"></app-match-display>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-bo-display [bo]="bo"></app-bo-display>
+    </mat-expansion-panel>
+</mat-accordion>

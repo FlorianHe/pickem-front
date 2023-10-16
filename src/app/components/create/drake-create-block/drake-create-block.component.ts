@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SideService } from 'src/app/services/side.service';
 import { Drake } from 'src/app/shared/interfaces/drake';
 
 @Component({
@@ -8,14 +9,24 @@ import { Drake } from 'src/app/shared/interfaces/drake';
 })
 export class DrakeCreateBlockComponent implements OnInit {
 
-  @Output() drakePicked: EventEmitter<string> = new EventEmitter();
-
-  constructor() { }
+  @Input() sideColor!: string
+  @Output() drakeKilled: EventEmitter<Drake> = new EventEmitter();
+  clear: boolean = false;
+  
+  constructor(private sideService : SideService) { }
 
   ngOnInit(): void {
   }
 
-  onDrakePicked(drake: string): void {
-    this.drakePicked.emit(drake);
+  onDrakePicked(drake: Drake): void {
+    this.drakeKilled.emit(drake);
+  }
+
+  onClear() {
+    this.clear = !this.clear;
+    if (this.sideColor === "red")
+      this.sideService.redSide.drakeKilled = [];
+    else if (this.sideColor === "blue")
+      this.sideService.blueSide.drakeKilled = [];
   }
 }

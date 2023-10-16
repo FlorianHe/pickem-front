@@ -1,14 +1,4 @@
 <app-team-create-block class="flex-side" (teamPicked)="onTeamPicked($event)"></app-team-create-block>
 <app-ban-create-block class="flex-side" *ngIf="side.team.id != 0" (championPicked)="onBanChampionPicked($event)"></app-ban-create-block>
-<app-drake-create-block class="flex-side" *ngIf="side.team.id != 0"></app-drake-create-block>
+<app-drake-create-block class="flex-side" *ngIf="side.team.id != 0" (drakeKilled)="onDrakePicked($event)" [sideColor]="sideColor"></app-drake-create-block>
 <app-pick-create-block [team]="team" class="flex-side" *ngIf="side.team.id != 0" (playerPicked)="OnPlayerPicked($event)"></app-pick-create-block>
-<div class="flex-input">
-    <div class="baron-input">
-        <div>Baron Steal</div>
-        <input [(ngModel)]="side.baronSteal" type="number"/>
-    </div>
-    <div class="duration-input">
-        <div>Duration</div>
-        <input [(ngModel)]="side.duration" (input)="onInputChange()"  [ngClass]="{ 'valid-input': isDurationValid, 'invalid-input': !isDurationValid }"/>
-    </div>
-</div>

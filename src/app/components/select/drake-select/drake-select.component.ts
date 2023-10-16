@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { DrakeService } from 'src/app/services/drake.service';
 import { Drake } from 'src/app/shared/interfaces/drake';
 
@@ -12,8 +12,9 @@ export class DrakeSelectComponent implements OnInit {
   drakes!: Drake[];
   selectedDrake : Drake | null = null;
   showOptions = false;
-  @Output() drakePicked : EventEmitter<string> = new EventEmitter();
-  
+  @Output() drakePicked : EventEmitter<Drake> = new EventEmitter();
+  @Input() clear! : boolean
+
   constructor(private drakeService : DrakeService) { }
 
   ngOnInit(): void {
@@ -22,13 +23,19 @@ export class DrakeSelectComponent implements OnInit {
     })
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['clear']) {
+      this.selectedDrake = null
+    }
+  }
+
   toggleOptions() {
     this.showOptions = !this.showOptions;
   }
 
   selectDrake(drake:Drake) {
     this.selectedDrake = drake
-    this.drakePicked.emit(drake.type)
+    this.drakePicked.emit(drake)
     this.toggleOptions();
   }
 

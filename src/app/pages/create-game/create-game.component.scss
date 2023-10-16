@@ -6,6 +6,16 @@
     flex-wrap: wrap;
 }
 
+.winner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: $big-margin;
+    label {
+        padding-left: $main-margin;
+    }
+}
+
 .create-label {
     text-align: center;
     font-size: 48px;
@@ -17,4 +27,31 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: $big-margin;
+}
+
+.btn-side {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: $big-margin;
+}
+
+.bottom-input {
+    text-align: center;
+}
+
+.baron-input, .duration-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    margin: $main-margin;
+    margin-top: 0
+}
+
+.send-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }

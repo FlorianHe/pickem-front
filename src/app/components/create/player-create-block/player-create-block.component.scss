@@ -13,3 +13,14 @@
         width: 100px;
     }
 }
+
+.kda-input-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    input {
+        width: 100px;
+    }
+}

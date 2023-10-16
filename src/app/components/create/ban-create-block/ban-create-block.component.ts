@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Ban } from 'src/app/shared/interfaces/ban';
 import { Champion } from 'src/app/shared/interfaces/champion';
 import { Picking } from 'src/app/shared/interfaces/picking';

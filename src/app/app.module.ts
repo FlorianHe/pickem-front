@@ -31,6 +31,14 @@ import { DrakeCreateBlockComponent } from './components/create/drake-create-bloc
 import { PickCreateBlockComponent } from './components/create/pick-create-block/pick-create-block.component';
 import { PlayerCreateBlockComponent } from './components/create/player-create-block/player-create-block.component';
 import { DrakeSelectComponent } from './components/select/drake-select/drake-select.component';
+import { GamesPageComponent } from './pages/games-page/games-page.component';
+import { GameDisplayComponent } from './components/display/game-display/game-display.component';
+import { BoDisplayComponent } from './components/display/bo-display/bo-display.component';
+import { BanDisplayComponent } from './components/display/ban-display/ban-display.component';
+import { DrakeDisplayComponent } from './components/display/drake-display/drake-display.component';
+import { PickDisplayComponent } from './components/display/pick-display/pick-display.component';
+import { MatchDisplayComponent } from './components/display/match-display/match-display.component';
+import { KdaDisplayComponent } from './components/display/kda-display/kda-display.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +66,15 @@ import { DrakeSelectComponent } from './components/select/drake-select/drake-sel
     DrakeCreateBlockComponent,
     PickCreateBlockComponent,
     PlayerCreateBlockComponent,
-    DrakeSelectComponent
+    DrakeSelectComponent,
+    GamesPageComponent,
+    GameDisplayComponent,
+    BoDisplayComponent,
+    BanDisplayComponent,
+    DrakeDisplayComponent,
+    PickDisplayComponent,
+    MatchDisplayComponent,
+    KdaDisplayComponent
   ],
   imports: [
     BrowserModule,

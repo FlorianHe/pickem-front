@@ -1,0 +1,11 @@
+<div class="pick">
+    <div class="champion-pick" *ngFor="let pick of picks">
+        <div class="player-name">{{pick.player.name}}</div>
+        <div class="player-champion">
+            <img class="champion-img" width="75" height="84" src="/assets/images/champions/{{pick.champion.name | lowercase}}.jpg" />
+        </div>
+        <div  class="player-kda">
+            <app-kda-display [pick]="pick"></app-kda-display>
+        </div>
+    </div>
+</div>

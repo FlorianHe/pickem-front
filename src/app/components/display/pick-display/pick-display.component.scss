@@ -1,0 +1,21 @@
+@use "/src/_import.scss" as *;
+
+.pick {
+    .champion-pick {
+        margin:$main-margin;
+        display: flex;
+        align-items: center;
+        .player-name {
+            flex: 0.5;
+        }
+        .player-champion {
+                flex: 1;
+            .champion-img {
+                border-radius: 20px;
+            }
+        }
+        .player-kda {
+            flex: 2;
+        }
+    }
+}
