@@ -70,4 +70,25 @@ export class SideService {
       return false
     return true;
   }
+
+  public reset() {
+    this.redSide = {
+      team: {id : 0, name : ""},
+      ban: [],
+      pick: [],
+      drakeKilled: [],
+    };
+    this.blueSide = {
+      team: {id : 0, name : ""},
+      ban: [],
+      pick: [],
+      drakeKilled: [],
+    };
+    this.kDA = []
+    this.bO = {id:0};
+    this.baronSteal = 0;
+    this.duration = '';
+    this.pentakill = [];
+    this.winner = null;
+  }
 }
