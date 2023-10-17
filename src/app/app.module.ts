@@ -40,6 +40,7 @@ import { PickDisplayComponent } from './components/display/pick-display/pick-dis
 import { MatchDisplayComponent } from './components/display/match-display/match-display.component';
 import { KdaDisplayComponent } from './components/display/kda-display/kda-display.component';
 import { LegalComponent } from './pages/legal/legal.component';
+import { GameCreatedComponent } from './pages/game-created/game-created.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { LegalComponent } from './pages/legal/legal.component';
     PickDisplayComponent,
     MatchDisplayComponent,
     KdaDisplayComponent,
-    LegalComponent
+    LegalComponent,
+    GameCreatedComponent
   ],
   imports: [
     BrowserModule,

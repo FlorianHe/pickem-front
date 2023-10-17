@@ -6,6 +6,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CreateGameComponent } from './pages/create-game/create-game.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { LegalComponent } from './pages/legal/legal.component';
+import { GameCreatedComponent } from './pages/game-created/game-created.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,12 @@ const routes: Routes = [
     component: LegalComponent,
     title: "Pick'Em | legals"
   },
+  {
+    path: APP_ROUTES.rGameCreated,
+    component: GameCreatedComponent,
+    title: "Pick'Em | Game created successfully"
+  },
+  
 ];
 
 @NgModule({

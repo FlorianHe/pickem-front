@@ -7,7 +7,6 @@ import { BOService } from 'src/app/services/b-o.service';
 import { GameService } from 'src/app/services/game.service';
 import { Game } from 'src/app/shared/interfaces/game';
 import { Team } from 'src/app/shared/interfaces/team';
-import { Pentakill } from 'src/app/shared/interfaces/pentakill';
 import { PentakillService } from 'src/app/services/pentakill.service';
 import { PickService } from 'src/app/services/pick.service';
 import { BanService } from 'src/app/services/ban.service';
@@ -17,6 +16,8 @@ import { Ban } from 'src/app/shared/interfaces/ban';
 import { DrakeKilled } from 'src/app/shared/interfaces/drakeKilled';
 import { DrakeKilledService } from 'src/app/services/drake-killed.service';
 import { KDAService } from 'src/app/services/k-da.service';
+import { Router } from '@angular/router';
+import { APP_ROUTES } from 'src/app/shared/globals/routes';
 
 @Component({
   selector: 'app-create-game',
@@ -44,7 +45,8 @@ export class CreateGameComponent implements OnInit {
                 private pickService: PickService,
                 private banService: BanService,
                 private drakeKilledService: DrakeKilledService,
-                private kDAService : KDAService) { }
+                private kDAService : KDAService,
+                private router: Router) { }
 
   ngOnInit(): void {
     this.championService.getChampions().subscribe((champions) => {
@@ -152,6 +154,7 @@ export class CreateGameComponent implements OnInit {
         );
       })
     })
+    this.router.navigate([APP_ROUTES.gameCreated]);
   }
 
   isValid(): boolean {
@@ -187,7 +190,5 @@ export class CreateGameComponent implements OnInit {
     if (!this.blueTeamWins && !this.redTeamWins) {
       this.sideService.winner = null
     }
-
-    console.log(this.sideService.winner)
   }
 }
