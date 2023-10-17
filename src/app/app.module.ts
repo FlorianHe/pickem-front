@@ -39,6 +39,7 @@ import { DrakeDisplayComponent } from './components/display/drake-display/drake-
 import { PickDisplayComponent } from './components/display/pick-display/pick-display.component';
 import { MatchDisplayComponent } from './components/display/match-display/match-display.component';
 import { KdaDisplayComponent } from './components/display/kda-display/kda-display.component';
+import { LegalComponent } from './pages/legal/legal.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { KdaDisplayComponent } from './components/display/kda-display/kda-displa
     DrakeDisplayComponent,
     PickDisplayComponent,
     MatchDisplayComponent,
-    KdaDisplayComponent
+    KdaDisplayComponent,
+    LegalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,16 @@
+@use "/src/_import.scss" as *;
+
 .custom-dropdown {
   position: relative;
-  width: 101px;
+  width: 60px;
   border: 1px solid grey;
 }
 
 .selected-champion {
-  width: 100px;
-  height: 112px;
+  width: 60px;
+  height: 67px;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .dropdown-rows {
@@ -33,11 +36,68 @@
 }
 
 .dropdown-row div {
-  width: 100px;
-  height: 112px;
+  width: 60px;
+  height: 67px;
   cursor: pointer;
 }
 
 .dropdown-row div:hover {
   background-color: #f0f0f0;
+}
+
+.champion-image {
+  width: 60px; 
+  height: 67px;
+}
+
+.move0 {
+  left : 0;
+}
+.move1 {
+  left : -60px;
+}
+.move2 {
+  left : -120px;
+}
+.move3 {
+  left : -180px;
+}
+.move4 {
+  left : -240px;
+}
+
+@media screen and (min-width: $min-width-desktop) {
+  .custom-dropdown {
+    width: 101px;
+  }
+  .selected-champion {
+    width: 100px;
+    height: 112px;
+    font-size: initial;
+  }
+
+  .dropdown-row div {
+    width: 100px;
+    height: 112px;
+  }
+  .champion-image {
+    width: 100px; 
+    height: 112px;
+  }
+
+  .move0 {
+    left : 0;
+  }
+  .move1 {
+    left : -100px;
+  }
+  .move2 {
+    left : -200px;
+  }
+  .move3 {
+    left : -300px;
+  }
+  .move4 {
+    left : -400px;
+  }
 }
