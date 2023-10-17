@@ -14,12 +14,14 @@ const APP_ROUTES = {
     rDrake: 'drake',
     create: '/create-game',
     rCreate: 'create-game',
-    Games: "/games",
+    games: "/games",
     rGames: "games",
     notFound: '/404',
     rNotFound: '404',
     legal: '/legal',
     rLegal: 'legal',
+    gameCreated: '/game-created',
+    rGameCreated: 'game-created',
 };
 
 export { APP_ROUTES, FRONTEND_URL, ROUTES };

@@ -1,0 +1,14 @@
+@use "/src/_import.scss" as *;
+
+.game-created {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+        margin:$big-margin;
+    }
+    .btn-game-created {
+        @include buttons;
+    }
+}
+

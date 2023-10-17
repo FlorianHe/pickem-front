@@ -26,6 +26,6 @@
         <input [(ngModel)]="duration" (input)="onDurationChange()"  [ngClass]="{ 'valid-input': isDurationValid, 'invalid-input': !isDurationValid }"/>
     </div>
     <div class="send-div">
-        <button class="send-btn" [disabled]="!isValid()" (click)="sendBO()">Send BO</button><!---->
+        <button class="send-btn" [disabled]="!isValid()" (click)="sendBO()">Create game</button>
     </div>
 </div>
