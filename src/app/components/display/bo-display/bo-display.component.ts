@@ -20,6 +20,7 @@ export class BoDisplayComponent implements OnInit {
   ngOnInit(): void {
     this.gameService.getGamesByBO(this.bo).subscribe((games) => {
       this.games = games
+      console.log(games)
       const teamHome = games[0].teamBlue.id;
       const teamAway = games[0].teamRed.id;
       games.forEach((game) => {
