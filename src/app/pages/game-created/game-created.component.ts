@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SideService } from 'src/app/services/side.service';
 import { APP_ROUTES } from 'src/app/shared/globals/routes';
 
 @Component({
@@ -9,16 +10,18 @@ import { APP_ROUTES } from 'src/app/shared/globals/routes';
 })
 export class GameCreatedComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, private sideService : SideService) { }
 
   ngOnInit(): void {
   }
 
   navigateToCreate() : void {
+    this.sideService.reset();
     this.router.navigate([APP_ROUTES.create]);
   }
 
   navigateToGames() : void {
+    this.sideService.reset();
     this.router.navigate([APP_ROUTES.games]);
   }
 }
