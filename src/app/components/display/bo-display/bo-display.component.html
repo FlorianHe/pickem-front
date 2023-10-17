@@ -1,1 +1,12 @@
+<div class="center score">
+    <div class="team-img">
+        <img width="72" height="72" src="/assets/images/teams/{{games[0].teamBlue.name | spaceToUnderscore }}.png" />
+    </div>
+    <div class="score-text">
+        {{homeWin}} - {{awayWin}}
+    </div>
+    <div class="team-img">
+        <img width="72" height="72" src="/assets/images/teams/{{games[0].teamRed.name | spaceToUnderscore }}.png" />
+    </div>
+</div>
 <app-game-display *ngFor="let game of games" [game]="game"></app-game-display>

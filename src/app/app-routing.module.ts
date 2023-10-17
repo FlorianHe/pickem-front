@@ -5,6 +5,7 @@ import { DrakePageComponent } from './pages/drake-page/drake-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CreateGameComponent } from './pages/create-game/create-game.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
+import { LegalComponent } from './pages/legal/legal.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
     path: APP_ROUTES.rGames,
     component: GamesPageComponent,
     title: "Pick'Em | All the games"
+  },
+  {
+    path: APP_ROUTES.rLegal,
+    component: LegalComponent,
+    title: "Pick'Em | legals"
   },
 ];
 

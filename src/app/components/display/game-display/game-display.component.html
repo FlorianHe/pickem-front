@@ -3,12 +3,8 @@
     <div class="sides">
         <div class="blue-side">
             <div class="team-img">
-                <div>
+                <div [ngClass]="{'border-win': game.teamBlue.id == game.teamWinner.id, 'border-lose': game.teamRed.id == game.teamWinner.id }">
                     <img width="72" height="72" src="/assets/images/teams/{{blueSide.team.name | spaceToUnderscore }}.png" />
-                </div>
-                <div class="result-number">
-                    <span *ngIf="blueSide.team.id === game.teamWinner.id">1</span>
-                    <span *ngIf="blueSide.team.id !== game.teamWinner.id">0</span>
                 </div>
             </div>
             <div class="center">Bans</div>
@@ -20,11 +16,7 @@
         </div>
         <div class="red-side">
             <div class="team-img">
-                <div class="result-number">
-                    <span *ngIf="redSide.team.id === game.teamWinner.id">1</span>
-                    <span *ngIf="redSide.team.id !== game.teamWinner.id">0</span>
-                </div>
-                <div>
+                <div [ngClass]="{'border-win': game.teamRed.id == game.teamWinner.id, 'border-lose': game.teamBlue.id == game.teamWinner.id }">
                     <img width="72" height="72" src="/assets/images/teams/{{redSide.team.name | spaceToUnderscore }}.png" />
                 </div>
             </div>
