@@ -1,3 +1,16 @@
-<div *ngIf="kda">
-    {{kda.kills}} / {{kda.death}} / {{kda.assist}} - KDA : {{kda.kda}}
+<div *ngIf="kda" class="kda">
+    <div class="detail-kda">
+        <div>
+            <img class="icone" src="/assets/images/icones/sword.png" />{{kda.kills}}
+        </div>
+        <div>
+            <img class="icone" src="/assets/images/icones/skull.png" />{{kda.death}}
+        </div>
+        <div>
+            <img class="icone" src="/assets/images/icones/shield.png" />{{kda.assist}}
+        </div>
+    </div>
+    <div class="detail-kda">
+        KDA : {{kda.kda}}
+    </div>
 </div>

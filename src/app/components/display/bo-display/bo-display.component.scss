@@ -1,0 +1,18 @@
+@use "/src/_import.scss" as *;
+
+.score {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: $main-margin;
+    .score-text {
+        margin: auto 0;
+        padding: 3rem;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    img {
+        background-color: black;
+    }
+}

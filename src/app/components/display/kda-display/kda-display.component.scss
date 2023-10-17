@@ -1,0 +1,14 @@
+@use "/src/_import.scss" as *;
+
+.kda {
+    display: flex;
+    align-items: center;
+    height: 84px;
+    .detail-kda {
+        margin: 0 $main-margin;
+    }
+    .icone {
+        width: 20px;
+        height: 20px;
+    }
+}

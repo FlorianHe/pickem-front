@@ -18,6 +18,8 @@ const APP_ROUTES = {
     rGames: "games",
     notFound: '/404',
     rNotFound: '404',
+    legal: '/legal',
+    rLegal: 'legal',
 };
 
 export { APP_ROUTES, FRONTEND_URL, ROUTES };

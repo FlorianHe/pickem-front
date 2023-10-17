@@ -10,7 +10,7 @@
     align-items: center;
     flex-direction: column;
     input {
-        width: 100px;
+        width: 60px;
     }
 }
 
@@ -21,6 +21,15 @@
     flex-direction: column;
     text-align: center;
     input {
-        width: 100px;
+        width: 60px;
     }
+}
+
+@media screen and (min-width: $min-width-desktop) {
+    .kda-input-div, .pentakill-input {
+        input {
+            width: 100px;
+        }
+    }
+
 }

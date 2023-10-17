@@ -16,7 +16,6 @@ export class ChampionSelectComponent implements OnInit {
   champions!: Champion[];
   selectedChampion : Champion | null = null;
   showOptions = false;
-  move:number = 0;
 
   constructor(private championService : ChampionService, private sideService : SideService) { }
 
@@ -29,7 +28,6 @@ export class ChampionSelectComponent implements OnInit {
       //  console.log(isChampionInPicks(champion))
       this.champions = champions;
     })
-      this.move = this.i * -100;
   }
 
   toggleOptions() {

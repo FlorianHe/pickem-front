@@ -2,20 +2,29 @@
 
 .pick {
     .champion-pick {
-        margin:$main-margin;
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+        font-size: 1.6rem;
+        border-bottom: 1px solid #252c32;
+        padding: 24px 0 24px 24px;
+        height: 157px;
         .player-name {
-            flex: 0.5;
+            padding-bottom: 5px;
+            font-weight: bold;
+            flex-basis: 100%;
         }
         .player-champion {
-                flex: 1;
+            position: relative;
+            flex-basis: 75px;
+            width: 75px;
+            height: 84px;
             .champion-img {
                 border-radius: 20px;
             }
         }
         .player-kda {
-            flex: 2;
+            flex: 1;
+            padding-left: 3px;
         }
     }
 }

@@ -1,12 +1,12 @@
 <div class="custom-dropdown">
     <div class="selected-champion" (click)="toggleOptions()">
-        <span *ngIf="!selectedChampion">Select a champion</span>
-        <img *ngIf="selectedChampion" width="100" height="112" src="/assets/images/champions/{{selectedChampion.name | lowercase }}.jpg" />
+        <span *ngIf="!selectedChampion">Pick a champion</span>
+        <img class="champion-image" *ngIf="selectedChampion" src="/assets/images/champions/{{selectedChampion.name | lowercase }}.jpg" />
     </div>
-    <div class="dropdown-rows" [style.left.px]="move" *ngIf="showOptions">
+    <div class="dropdown-rows" [ngClass]="'move'+i" *ngIf="showOptions">
         <div *ngFor="let row of groupChampions(champions, 5)" class="dropdown-row">
             <div *ngFor="let champion of row" (click)="selectChampion(champion)">
-                <img width="100" height="112" src="/assets/images/champions/{{champion.name | lowercase}}.jpg" />
+                <img class="champion-image" src="/assets/images/champions/{{champion.name | lowercase}}.jpg" />
             </div>
         </div>
     </div>
