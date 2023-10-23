@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DrakeBlockComponent } from './components/drake-block/drake-block.component';
+import { DrakeBlockComponent } from './components/stats-block/drake-block/drake-block.component';
 import { KdaBlockComponent } from './components/kda-block/kda-block.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DrakePageComponent } from './pages/drake-page/drake-page.component';
@@ -13,17 +13,17 @@ import { FormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { PentakillPageComponent } from './pages/pentakill-page/pentakill-page.component';
 import { DurationPageComponent } from './pages/duration-page/duration-page.component';
-import { DurationBlockComponent } from './components/duration-block/duration-block.component';
+import { DurationBlockComponent } from './components/stats-block/duration-block/duration-block.component';
 import { SpaceToUnderscorePipe } from './pipes/space-to-underscore.pipe';
-import { PlayerBlockComponent } from './components/player-block/player-block.component';
-import { PentakillBlockComponent } from './components/pentakill-block/pentakill-block.component';
+import { PlayerBlockComponent } from './components/stats-block/player-block/player-block.component';
+import { PentakillBlockComponent } from './components/stats-block/pentakill-block/pentakill-block.component';
 import { CreateGameComponent } from './pages/create-game/create-game.component';
 import { ChampionSelectComponent } from './components/select/champion-select/champion-select.component';
-import { BanBlockComponent } from './components/ban-block/ban-block.component';
-import { TeamBlockComponent } from './components/team-block/team-block.component';
+import { BanBlockComponent } from './components/stats-block/ban-block/ban-block.component';
+import { TeamBlockComponent } from './components/stats-block/team-block/team-block.component';
 import { TeamSelectComponent } from './components/select/team-select/team-select.component';
-import { SideBlockComponent } from './components/side-block/side-block.component';
-import { PickBlockComponent } from './components/pick-block/pick-block.component';
+import { SideBlockComponent } from './components/stats-block/side-block/side-block.component';
+import { PickBlockComponent } from './components/stats-block/pick-block/pick-block.component';
 import { SideCreateBlockComponent } from './components/create/side-create-block/side-create-block.component';
 import { TeamCreateBlockComponent } from './components/create/team-create-block/team-create-block.component';
 import { BanCreateBlockComponent } from './components/create/ban-create-block/ban-create-block.component';
@@ -41,7 +41,11 @@ import { MatchDisplayComponent } from './components/display/match-display/match-
 import { KdaDisplayComponent } from './components/display/kda-display/kda-display.component';
 import { LegalComponent } from './pages/legal/legal.component';
 import { GameCreatedComponent } from './pages/game-created/game-created.component';
-
+import { ChampionBlockComponent } from './components/stats-block/champion-block/champion-block.component';
+import { ChampionsPageComponent } from './pages/champions-page/champions-page.component';
+import { PlayerPageComponent } from './pages/player-page/player-page.component';
+import { DeathBlockComponent } from './components/stats-block/death-block/death-block.component';
+import { WinrateBlockComponent } from './components/stats-block/winrate-block/winrate-block.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,7 +82,12 @@ import { GameCreatedComponent } from './pages/game-created/game-created.componen
     MatchDisplayComponent,
     KdaDisplayComponent,
     LegalComponent,
-    GameCreatedComponent
+    GameCreatedComponent,
+    ChampionBlockComponent,
+    ChampionsPageComponent,
+    PlayerPageComponent,
+    DeathBlockComponent,
+    WinrateBlockComponent
   ],
   imports: [
     BrowserModule,

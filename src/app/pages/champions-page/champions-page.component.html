@@ -1,0 +1,22 @@
+<div class="game">
+    <div>Most pick</div>
+    <div class="champion">
+        <app-pick-block *ngFor="let pick of picks" [champion]="pick"></app-pick-block>
+    </div>
+    <div>Most ban</div>
+    <div class="champion">
+        <app-ban-block *ngFor="let ban of bans" [champion]="ban"></app-ban-block>
+    </div>
+    <div>Most death</div>
+    <div class="champion">
+        <app-death-block *ngFor="let death of deaths" [champion]="death"></app-death-block>
+    </div>
+    <div>Most roles</div>
+    <div class="champion">
+        <app-death-block *ngFor="let role of roles" [champion]="role"></app-death-block>
+    </div>
+    <div>Winrate</div>
+    <div class="champion">
+        <app-winrate-block *ngFor="let winrate of winrates" [winrate]="winrate"></app-winrate-block>
+    </div>
+</div>

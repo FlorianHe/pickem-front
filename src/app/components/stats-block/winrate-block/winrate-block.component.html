@@ -1,0 +1,11 @@
+<div class="winrate-card">
+    <div class="winrate-img center">
+        <img width="100px" height="112px" src="/assets/images/champions/{{winrate.champion.name | lowercase}}.jpg" >
+    </div>
+    <div class="winrate-name center">
+      {{winrate.champion.name | lowercase | titlecase}}
+    </div>
+    <div class="winrate-amount center">
+        {{winrate.winrate}}%
+    </div>
+  </div>

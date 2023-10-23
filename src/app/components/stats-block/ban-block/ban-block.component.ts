@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ChampionAmount } from 'src/app/shared/interfaces/championAmount';
 
 @Component({
   selector: 'app-ban-block',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BanBlockComponent implements OnInit {
 
+  @Input() champion! : ChampionAmount
   constructor() { }
 
   ngOnInit(): void {

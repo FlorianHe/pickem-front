@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DrakeService } from 'src/app/services/drake.service';
-import { Drake } from 'src/app/shared/interfaces/drake';
+import { DrakeKilledNumber } from 'src/app/shared/interfaces/drakeKilledNumber';
 
 @Component({
   selector: 'app-drake-page',
@@ -9,13 +9,13 @@ import { Drake } from 'src/app/shared/interfaces/drake';
 })
 export class DrakePageComponent implements OnInit {
 
-  drakes! : Drake[]
+  drakes! : DrakeKilledNumber[]
   constructor(private drakeService : DrakeService) { }
 
 
   ngOnInit(): void {
-    this.drakeService.getDrakes().subscribe((drakes) => {
-      this.drakes = drakes//.sort((a, b) => b.killed - a.killed);
+    this.drakeService.getDrakeKilledAmount().subscribe((drakes) => {
+      this.drakes = drakes.sort((a, b) => b.amount - a.amount);
     })
   }
 
