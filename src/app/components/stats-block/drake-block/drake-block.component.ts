@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Drake } from 'src/app/shared/interfaces/drake';
+import { DrakeKilledNumber } from 'src/app/shared/interfaces/drakeKilledNumber';
 
 @Component({
   selector: 'app-drake-block',
@@ -8,7 +9,7 @@ import { Drake } from 'src/app/shared/interfaces/drake';
 })
 export class DrakeBlockComponent implements OnInit {
 
-  @Input() drake! : Drake;
+  @Input() drake! : DrakeKilledNumber;
 
 
   constructor() { }
