@@ -1,0 +1,14 @@
+<div class="champion-card">
+    <div class="champion-img center">
+        <img width="100px" height="112px" src="/assets/images/champions/{{champion.champion.name | lowercase}}.jpg" >
+    </div>
+    <div class="champion-name center">
+      {{champion.champion.name | lowercase | titlecase}}
+    </div>
+    <div class="champion-amount center">
+        {{champion.amount}}
+    </div>
+    <div class="champion-role center" *ngIf="champion.roles">
+        <div *ngFor="let role of champion.roles">{{role}}</div>
+    </div>
+  </div>
